@@ -92,7 +92,7 @@ public class Pedido {
         if (servicos == null || servicos.isEmpty()){
             return 0.0;
         }
-        double valorBase = servicos.stream();//modificar
+        double valorBase = servicos.stream(); //MODIFICAR ESSA PARTE
         .mapToDouble(Servico::getValor)
                 .sum();
 
@@ -111,3 +111,4 @@ public class Pedido {
         this.valorTotal -= calcularValorTotal();
     }
 }
+
