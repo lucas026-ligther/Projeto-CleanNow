@@ -1,54 +1,55 @@
-import java.util.Objects;
+package Lavanderia;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Cliente {
+
     private String nome;
     private String id;
-    private String endereço;
+    private String endereco;
     private String telefone;
     private List<String> preferencias;
+    private List<Pedido> historicoPedidos;
     private LocalDateTime dataCadastro;
-    private boolean isVip;
+    private boolean vip;
+    private PlanoAssinatura planoAssinatura;
 
-    public Cliente(String nome,String id,String endereço,String telefone) {
-        this.nome =Objects.requireNonNull(nome,"nome não pode ser nulo");
-        this.id = Objects.requireNonNull(id);
-        this.endereço = endereço;
+    public Cliente(String nome, String id, String endereco, String telefone) {
+        this.nome = nome;
+        this.id = id;
+        this.endereco = endereco;
         this.telefone = telefone;
         this.preferencias = new ArrayList<>();
+        this.historicoPedidos = new ArrayList<>();
         this.dataCadastro = LocalDateTime.now();
-        this.isVip = false;
+        this.vip = false;
     }
 
-    public String getNome() {return nome;}
-    public void setNome(String nome) {this.nome = nome;}
-
-    public String getId() {return id;}
-
-    public String getEndereço() {return endereço;}
-    public void setEndereço(String endereço) {this.endereço = endereço;}
-
+    public String getNome() { return nome; }
+    public String getEndereco() { return endereco; }
     public String getTelefone() { return telefone; }
-    public void setTelefone(String telefone) { this.telefone = telefone; }
+    public boolean isVip() { return vip; }
+    public void setVip(boolean vip) { this.vip = vip; }
 
-    public List<String> getPreferencias() { return preferencias; }
-    public void addPreferencia(String p) { preferencias.add(p); }
-
-    public LocalDateTime getDataCadastro() { return dataCadastro; }
-
-    public static boolean isVip() { return isVip; }
-    public void setVip(boolean vip) { this.isVip = vip; }
-
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\'' +
-                ", id='" + id + '\'' +
-                ", endereco='" + endereço + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", isVip=" + isVip +
-                ", dataCadastro=" + dataCadastro +
-                '}';
+    public void addPreferencia(String p) {
+        preferencias.add(p);
     }
 
+    public List<String> getPreferencias() {
+        return preferencias;
+    }
+
+    public void addPedidoAoHistorico(Pedido pedido) {
+        historicoPedidos.add(pedido);
+    }
+
+    public List<Pedido> getHistoricoPedidos() {
+        return historicoPedidos;
+    }
+    public void assinarPlano(PlanoAssinatura planoAssinatura) {
+        this.planoAssinatura = planoAssinatura;
+        this.vip = true;
+    }
 }
