@@ -12,4 +12,4 @@ Na classe Pagamento, é registrado como o cliente pagou e se a operação foi co
 
 Para finalizar, a classe CleanNowSystem é o coração do programa. Nela, criamos um cliente, colocamos os serviços, montamos um pedido, marcamos a busca e entrega, fazemos o pagamento e mudamos o status do pedido. Também mostramos o histórico de tudo que o cliente já pediu.
 
-Este projeto faz tudo que o trabalho pedia: cadastrar clientes, registrar serviços, criar pacotes, dar descontos, fazer agendamentos, receber pagamentos, mostrar onde está o pedido e guardar o histórico.
+Este projeto faz tudo que o trabalho pedia: cadastrar clientes, registrar serviços, dar descontos, fazer agendamentos, receber pagamentos, mostrar onde está o pedido e guardar o histórico.
