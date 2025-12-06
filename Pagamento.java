@@ -1,8 +1,7 @@
 package Lavanderia;
 
 public class Pagamento {
-
-    private double valor;
+    private final double valor;
     private String metodo;
     private boolean confirmado;
 
@@ -12,19 +11,8 @@ public class Pagamento {
         this.confirmado = false;
     }
 
-    public void confirmar() {
-        confirmado = true;
-    }
-
-    public boolean isConfirmado() {
-        return confirmado;
-    }
-
-    public String getMetodo() {
-        return metodo;
-    }
-
-    public double getValor() {
-        return valor;
-    }
+    public void confirmar() { confirmado = true; }
+    public boolean isConfirmado() { return confirmado; }
+    public String getMetodo() { return metodo; }
+    public double getValor() { return valor; }
 }
