@@ -1,24 +1,37 @@
 package Lavanderia;
 
-public class Servico {
+import java.time.LocalDateTime;
+import java.util.Objects;
 
+public class Servico {
     private String id;
     private String nome;
     private String descricao;
     private double preco;
-    private int prazoHoras;
+    private boolean disponivel;
+    private LocalDateTime dataEntrega;
 
+    // prazoHoras é int (ex: 24)
     public Servico(String id, String nome, String descricao, double preco, int prazoHoras) {
-        this.id = id;
-        this.nome = nome;
+        this.id = Objects.requireNonNull(id);
+        this.nome = Objects.requireNonNull(nome);
         this.descricao = descricao;
         this.preco = preco;
-        this.prazoHoras = prazoHoras;
+        this.disponivel = true;
+        this.dataEntrega = LocalDateTime.now().plusHours(Math.max(0, prazoHoras));
     }
 
+    public String getId() { return id; }
     public String getNome() { return nome; }
+    public String getDescricao() { return descricao; }
     public double getPreco() { return preco; }
-    public String getTipo() { return nome; }
+    public boolean isDisponivel() { return disponivel; }
+    public LocalDateTime getDataEntrega() { return dataEntrega; }
+
+    @Override
+    public String toString() {
+        return nome + " (id=" + id + ", R$" + preco + ")";
+    }
 }
 
 
