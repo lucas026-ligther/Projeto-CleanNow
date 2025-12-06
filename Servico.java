@@ -11,7 +11,6 @@ public class Servico {
     private boolean disponivel;
     private LocalDateTime dataEntrega;
 
-    // prazoHoras é int (ex: 24)
     public Servico(String id, String nome, String descricao, double preco, int prazoHoras) {
         this.id = Objects.requireNonNull(id);
         this.nome = Objects.requireNonNull(nome);
@@ -33,5 +32,6 @@ public class Servico {
         return nome + " (id=" + id + ", R$" + preco + ")";
     }
 }
+
 
 
