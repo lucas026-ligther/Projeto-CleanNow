@@ -1,0 +1,50 @@
+{
+  "0123": {
+    "nome": "Lucas",
+    "id": "0123",
+    "endereco": "Rua XX",
+    "telefone": "86 9 99999999",
+    "dataCadastro": "2025-12-04T21:53:49.976826400",
+    "vip": false
+  },
+  "0": {
+    "nome": "",
+    "id": "0",
+    "endereco": "",
+    "telefone": "",
+    "dataCadastro": "2025-12-04T21:55:38.373615200",
+    "vip": false
+  },
+  "0001": {
+    "nome": "João",
+    "id": "0001",
+    "dataCadastro": "2025-12-05T20:39:28.675272800",
+    "vip": false
+  },
+  "João": {
+    "nome": "0001",
+    "id": "João",
+    "dataCadastro": "2025-12-05T20:41:10.821581100",
+    "vip": true,
+    "planoAssinatura": {
+      "id": "",
+      "servicosInclusos": 0,
+      "mensalidade": 49.9,
+      "desconto": 0.1,
+      "ativo": true
+    }
+  },
+  "Lucas": {
+    "nome": "0123",
+    "id": "Lucas",
+    "dataCadastro": "2025-12-05T21:12:16.680437200",
+    "vip": true,
+    "planoAssinatura": {
+      "id": "",
+      "servicosInclusos": 0,
+      "mensalidade": 49.9,
+      "desconto": 0.1,
+      "ativo": true
+    }
+  }
+}
